@@ -1,0 +1,38 @@
+// variables
+@import '~assets/styles/scss/variables';
+
+// component
+@import '~assets/styles/scss/components/neu-button';
+@import '~assets/styles/scss/components/neu-card';
+@import '~assets/styles/scss/components/neu-scroll';
+@import '~assets/styles/scss/components/neu-topnav';
+
+html {
+    background-color: $neu-bg-base;
+	overflow-x: hidden;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-height: 100vh;
+	font-size: 16px;
+    color: $black;
+}
+
+nav > div {
+	padding: 0 10%;
+}
+section > div {
+	padding: 0 calc(10% + 1.5rem);
+}
+
+a {
+	color: $neu-col-black;
+	text-decoration: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+

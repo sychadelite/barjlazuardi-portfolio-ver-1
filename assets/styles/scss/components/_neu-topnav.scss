@@ -1,0 +1,151 @@
+#neumorphism-navbar-main {    
+    .navbar-brand {
+        margin: 0 1.5rem 0 1.5rem;
+        font-size: .875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .navbar-brand-logo {
+        height: 25px;
+        vertical-align: middle;
+        border-style: none;
+    }
+    .nav-item {
+        margin: 0 1.5rem 0 1.5rem;
+    }
+    .nav-link {
+        font-weight: 500;
+    }
+    .nav-link:hover {
+        color: $neu-col-black;
+    }
+
+    .border {
+        border: 0.0625rem solid $neu-border-base;
+    }
+    .border-light {
+        border-color: $neu-border-light;
+    }
+    .shadow-soft {
+        box-shadow: 6px 6px 12px $neu-shadow-soft,-6px -6px 12px #fff;
+    }
+    [class*=shadow] {
+        transition: all .2s ease;
+    }
+
+
+    .menu-actions {
+        .checkbox {
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 32px;
+            z-index: 5;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .hamburger-lines {
+            height: 26px;
+            width: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .line {
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 10px;
+                background: #0e2431;
+            }
+            .line1 {
+                transform-origin: 0% 0%;
+                transition: transform 0.4s ease-in-out;
+            }
+            .line2 {
+                transition: transform 0.2s ease-in-out;
+            }
+            .line3 {
+                transform-origin: 0% 100%;
+                transition: transform 0.4s ease-in-out;
+            }
+        }
+        input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+            transform: rotate(45deg);
+        }
+        input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+            transform: scaleY(0);
+        }
+        input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+            transform: rotate(-45deg);
+        }
+        input[type="checkbox"]:checked ~ .menu-items-mobile {
+            display: block;
+        }
+    }
+
+
+    .menu-items-mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 1.5rem;
+        color: #31344b;
+        border-radius: 0.55rem;
+        background: #e6e7ee;
+        box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+        height: fit-content;
+        max-height: calc(100vh - 30px);
+        margin: 7rem 15% 7rem 15%;
+        overflow: auto;
+
+        &.show {
+            animation: show-navbar-collapse .4s ease forwards;
+        }
+        &.out {
+            animation: out-navbar-collapse .4s ease forwards;
+            z-index: -1;
+        }
+
+        &::-webkit-scrollbar {
+            width: 12px;
+            -webkit-appearance: none;
+            &-thumb {
+                background-color: rgba(108, 121, 119, 0.44);
+                border: 2px solid $white;
+                border-radius: 1rem;
+            }
+        }
+
+        @keyframes show-navbar-collapse {
+            0% {
+                opacity: 0;
+                transform: scale(.95);
+                transform-origin: 100% 0;
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes out-navbar-collapse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(.95);
+                transform-origin: 100% 0;
+            }
+        }
+    }
+}
+
+#neumorphism-navbar-main.unpinned {
+    box-shadow: 6px 6px 12px $neu-shadow-soft, -6px -6px 12px #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $neu-bg-base;
+}
