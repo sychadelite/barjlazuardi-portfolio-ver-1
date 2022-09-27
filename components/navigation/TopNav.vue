@@ -27,8 +27,8 @@
 
       <div class="menu-actions">
         <ul class="flex flex-row items-center">
-          <li class="nav-item m-[1.5rem] p-2">
-            <a href="#" class="btn btn-primary p-2">Download</a>
+          <li class="nav-item m-[1.5rem] p-2 min-w-fit">
+            <a href="#" class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download</a>
           </li>
           <li class="nav-item m-[1.5rem] p-2 lg:hidden">
             <input class="checkbox" type="checkbox" name="" id="" @input="toggleDropdown('menu')"/>

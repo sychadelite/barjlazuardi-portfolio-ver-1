@@ -4,6 +4,7 @@
 // component
 @import '~assets/styles/scss/components/neu-button';
 @import '~assets/styles/scss/components/neu-card';
+@import '~assets/styles/scss/components/neu-pill';
 @import '~assets/styles/scss/components/neu-scroll';
 @import '~assets/styles/scss/components/neu-topnav';
 
@@ -17,6 +18,7 @@ section {
 	justify-content: center;
 	width: 100%;
 	min-height: 100vh;
+	padding: 2.5rem 0;
 	font-size: 16px;
     color: $black;
 }
