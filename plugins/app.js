@@ -18,7 +18,7 @@ export default () => {
     /* add icons to the library */
     library.add(faTwitter, faGithub, faLinkedin, faInstagram, faFacebook, faDiscord, faArrowAltCircleDown, faUserSecret, faFileArrowDown, faArrowUp)
     /* add font awesome icon component */
-    Vue.component('font-awesome-icon', FontAwesomeIcon)
+    Vue.component('FontAwesomeIcon', FontAwesomeIcon)
 
     Vue.config.productionTip = false
 }
