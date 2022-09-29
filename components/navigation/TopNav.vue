@@ -27,11 +27,11 @@
 
             <div class="menu-actions">
                 <ul class="flex flex-row items-center">
-                    <li class="nav-item m-[1.5rem] p-2 min-w-fit">
-                        <a href="#" class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download</a>
+                    <li class="flex justify-center items-center mx-2 sm:mx-6 nav-item m-[1.5rem] p-2 min-w-[11rem]">
+                        <a href="#" class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download CV</a>
                     </li>
-                    <li class="nav-item m-[1.5rem] p-2 lg:hidden">
-                        <input id="" class="checkbox" type="checkbox" name="" @input="toggleDropdown('menu')">
+                    <li class="flex justify-center items-center mx-2 sm:mx-6 nav-item m-[1.5rem] p-2 min-w-fit lg:hidden">
+                        <input id="checkbox-hamburger-topnav" class="checkbox" type="checkbox" name="">
                         <div class="hamburger-lines">
                             <span class="line line1"/>
                             <span class="line line2"/>
@@ -68,70 +68,48 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import $ from 'jquery'
-
 export default Vue.extend({
     name: 'NavigationTopNavComponent',
     data() {
         return {
-            windowWidth: 0,
             count: {
-                toggle: 0,
-                responsive: 0
-            }
-        }
-    },
-    watch: {
-        windowWidth(newWidth, oldWidth) {
-            if (newWidth >= 1024) {
-                if (this.count.responsive % 2 === 0) {
-                    const x = document.getElementsByClassName('menu-items-mobile')[0]
-                    x.classList.remove('out')
-                    if (document.querySelectorAll('.menu-items-mobile.show').length === 0) {
-                        x.classList.add('hidden')
-                    }
-                    console.log('large: ', newWidth)
-                    this.count.responsive = 1
-                }
-            } else if (this.count.responsive % 2 === 1) {
-                console.log('small: ', newWidth)
-                this.count.responsive = 0
+                toggle: 0
             }
         }
     },
     mounted() {
-    // const element = document.getElementsByTagName('html')[0] as HTMLElement
-    // element.setAttribute('class', 'dark')
+        // const element = document.getElementsByTagName('html')[0] as HTMLElement
+        // element.setAttribute('class', 'dark')
     },
     created() {
         if (process.client) {
-            this.windowWidth = window.innerWidth
+            const checkbox: any = document.getElementById('checkbox-hamburger-topnav')
+            const frame: any = document.querySelectorAll('.menu-items-mobile')
+            var vm = this
 
-            window.addEventListener('resize', this.onResize)
+            checkbox.addEventListener('change', function(e: any) {
+                if (e.target.checked === true) {
+                    frame.forEach((x: any) => {
+                        x.classList.remove('hidden')
+                        x.classList.remove('out')
+                        x.classList.add('show')
+                    })
+                    vm.count.toggle++
+                } else {
+                    frame.forEach((x: any) => {
+                        x.classList.remove('show')
+                        x.classList.add('out')
+                        // frame.addEventListener('transitionend', x.classList.add('hidden'))
+                        // https://www.impressivewebs.com/animate-display-block-none/
+                    })
+                    vm.count.toggle++
+                }
+            })
         }
     },
     beforeDestroy() {
-        window.removeEventListener('resize', this.onResize)
     },
     methods: {
-        toggleDropdown(state: String) {
-            if (state === 'menu') {
-                const frame = document.getElementsByClassName('menu-items-mobile')[0]
-                if (this.count.toggle % 2 === 0) {
-                    frame.classList.remove('hidden')
-                    frame.classList.add('show')
-                    frame.classList.remove('out')
-                    this.count.toggle++
-                } else {
-                    frame.classList.remove('show')
-                    frame.classList.add('out')
-                    this.count.toggle++
-                }
-            }
-        },
-        onResize() {
-            this.windowWidth = window.innerWidth
-        }
     }
 })
 </script>

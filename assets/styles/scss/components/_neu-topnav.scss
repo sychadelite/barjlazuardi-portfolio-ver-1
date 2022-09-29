@@ -11,7 +11,7 @@
         border-style: none;
     }
     .nav-item {
-        margin: 0 1.5rem 0 1.5rem;
+        // margin: 0 1.5rem 0 1.5rem;
     }
     .nav-link {
         font-weight: 500;
@@ -105,7 +105,6 @@
         }
         &.out {
             animation: out-navbar-collapse .4s ease forwards;
-            z-index: -1;
         }
 
         &::-webkit-scrollbar {

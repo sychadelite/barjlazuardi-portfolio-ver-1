@@ -28,7 +28,8 @@
       "@nuxtjs/axios",
       "@nuxt/content",
       "@types/node"
-    ]
+    ],
+    "jsx": "preserve"
   },
   "exclude": [
     "node_modules",
