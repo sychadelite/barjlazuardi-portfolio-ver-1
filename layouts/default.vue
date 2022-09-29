@@ -34,11 +34,11 @@ export default Vue.extend({
             window.addEventListener('scroll', function () {
                 var scroll: any = $(this).scrollTop()
                 if (scroll > previousScroll) {
-                    btn.style.display = 'block'
+                    btn.style.transform = 'translateY(0rem)'
                     header.classList.add('unpinned')
                     header.style.transform = 'translateY(-100%)'
                 } else {
-                    btn.style.display = 'none'
+                    btn.style.transform = 'translateY(10rem)'
                     if (scroll === 0) {
                         header.classList.remove('unpinned')
                     }
