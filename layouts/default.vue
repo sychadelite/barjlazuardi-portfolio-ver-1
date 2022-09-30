@@ -53,13 +53,18 @@ export default Vue.extend({
             }
 
             // viewport
+            // bugs viewport device-width on: 420px, 419px, 400px, 393px, 370px, 210px, 200px, 185px
             if (newWidth <= 455) {
                 if (this.count.viewport % 2 === 0) {
-                    console.log('viewport changed: ', newWidth)
-                    return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=455')
+                    if (newWidth === 420 || newWidth === 419 || newWidth === 400 || newWidth === 393 || newWidth === 370 || newWidth === 210 || newWidth === 200 || newWidth === 185) {
+                        console.log('asd')
+                    } else {
+                        this.count.viewport = 1
+                        return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=455')
+                    }
                 }
             } else if (this.count.viewport % 2 === 1) {
-                console.log('viewport changed: ', newWidth)
+                this.count.viewport = 0
                 return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=device-width')
             }
         }

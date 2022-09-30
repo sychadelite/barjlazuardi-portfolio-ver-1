@@ -1,7 +1,7 @@
 <template>
     <nav id="neumorphism-navbar-main" class="fixed flex justify-between items-center w-full h-[5.625rem] top-0 z-40 py-4 bg-transparent ease-in-out duration-200">
         <div class="relative flex justify-between items-center w-full max-h-[90px]">
-            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] py-2 px-4 rounded-[0.55rem] border border-light mr-2 sm:mr-0">
+            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] py-2 px-4 rounded-[0.55rem] border border-light mx-6 sm:mr-0">
                 <img class="navbar-brand-logo" src="https://demo.themesberg.com/neumorphism-ui/assets/img/brand/dark.svg" alt="Logo light">
             </a>
 
