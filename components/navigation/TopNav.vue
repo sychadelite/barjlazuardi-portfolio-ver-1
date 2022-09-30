@@ -1,36 +1,36 @@
 <template>
     <nav id="neumorphism-navbar-main" class="fixed flex justify-between items-center w-full h-[5.625rem] top-0 z-40 py-4 bg-transparent ease-in-out duration-200">
-        <div class="relative flex justify-between items-center w-full max-h-[90px]">
-            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] py-2 px-4 rounded-[0.55rem] border border-light mx-6 sm:mr-0">
+        <div class="relative flex justify-between items-center w-full max-h-[90px] mx-6 sm:mx-0">
+            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] pt-[0.35rem] px-4 rounded-[0.55rem] border border-light mx-0 sm:mx-6">
                 <img class="navbar-brand-logo" src="https://demo.themesberg.com/neumorphism-ui/assets/img/brand/dark.svg" alt="Logo light">
             </a>
 
             <div class="menu-items-desktop lg:block hidden">
                 <ul class="flex flex-row">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                    <li class="nav-item home">
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                    <li class="nav-item about">
+                        <a href="#about" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Skills</a>
+                    <li class="nav-item skills">
+                        <a href="#skills" class="nav-link">Skills</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Work</a>
+                    <li class="nav-item work">
+                        <a href="#work" class="nav-link">Work</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
+                    <li class="nav-item contact">
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="menu-actions">
+            <div class="menu-actions lg:-mx-8">
                 <ul class="flex flex-row items-center">
-                    <li class="flex justify-center items-center mx-2 lg:mx-6 nav-item p-2 min-w-[13rem]">
+                    <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-[13rem]">
                         <a href="#" class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download CV</a>
                     </li>
-                    <li class="flex justify-center items-center mx-2 lg:mx-6 nav-item p-2 min-w-fit lg:hidden">
+                    <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-fit lg:hidden">
                         <input id="checkbox-hamburger-topnav" class="checkbox" type="checkbox" name="">
                         <div class="hamburger-lines">
                             <span class="line line1"/>
@@ -44,20 +44,20 @@
             <!-- Mobile Menu Items -->
             <div class="menu-items-mobile hidden lg:hidden">
                 <ul class="flex flex-col">
-                    <li class="nav-item p-2">
-                        <a href="#" class="nav-link">Home</a>
+                    <li class="nav-item home p-2">
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item p-2">
-                        <a href="#" class="nav-link">About</a>
+                    <li class="nav-item about p-2">
+                        <a href="#about" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item p-2">
-                        <a href="#" class="nav-link">Skills</a>
+                    <li class="nav-item skills p-2">
+                        <a href="#skills" class="nav-link">Skills</a>
                     </li>
-                    <li class="nav-item p-2">
-                        <a href="#" class="nav-link">Work</a>
+                    <li class="nav-item work p-2">
+                        <a href="#work" class="nav-link">Work</a>
                     </li>
-                    <li class="nav-item p-2">
-                        <a href="#" class="nav-link">Contact</a>
+                    <li class="nav-item contact p-2">
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>

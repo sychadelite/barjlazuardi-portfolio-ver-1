@@ -9,8 +9,38 @@
         vertical-align: middle;
         border-style: none;
     }
-    .nav-item {
-        padding: 1.5rem;
+    .menu-items-desktop {
+        .nav-item {
+            padding: 1.5rem;
+            &:hover {
+                .nav-link {
+                    filter: brightness(20%);
+                }
+            }
+            &.active {
+                border-bottom: 0.1rem solid #111827;
+                border-radius: 50%;
+                .nav-link {
+                    color: teal;
+                }
+            }
+        }
+    }
+    .menu-items-mobile {
+        .nav-item {
+            padding: 1.5rem;
+            &:hover {
+                .nav-link {
+                    filter: brightness(20%);
+                }
+            }
+            &.active {
+                border-bottom: 0.1rem solid #111827;
+                .nav-link {
+                    color: teal;
+                }
+            }
+        }
     }
     .nav-link {
         font-weight: 500;

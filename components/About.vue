@@ -1,6 +1,10 @@
 <template>
-    <section>
+    <section id="about">
         <div class="flex flex-col gap-12 w-full">
+            <article class="prose lg:prose-xl">
+                <h1>About&nbsp;<span class="text-[#008080]">Me</span></h1>
+            </article>
+
             <!-- <span id="typed1"></span> -->
 
             <div class="flex flex-row">

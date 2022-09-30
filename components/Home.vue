@@ -1,11 +1,11 @@
 <template>
-    <section>
+    <section id="home">
         <div class="flex flex-col-reverse sm:flex-row gap-10 w-full h-fit 2xl:h-[inherit] 2xl:mt-[-10%] justify-evenly sm:justify-between items-center">
             <div class="flex flex-col gap-20 w-full sm:items-start mt-8 sm:mt-0">
                 <article class="prose lg:prose-xl">
                     <h1>Hi,<br>I'am<br><span class="text-[#008080]">Barj Lazuardi</span></h1>
                     <h4 class="text-2xl">
-                        Web Developer
+                        Web Developer &nbsp;&#128520;
                     </h4>
                 </article>
                 <div>
