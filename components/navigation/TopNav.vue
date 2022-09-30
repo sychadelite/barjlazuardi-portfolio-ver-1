@@ -1,25 +1,25 @@
 <template>
     <nav id="neumorphism-navbar-main" class="fixed flex justify-between items-center w-full h-[5.625rem] top-0 z-40 py-4 bg-transparent ease-in-out duration-200">
-        <div class="relative flex justify-between items-center w-full">
-            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] max-w-[50px] py-2 px-4 rounded-[0.55rem] border border-light">
+        <div class="relative flex justify-between items-center w-full max-h-[90px]">
+            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] py-2 px-4 rounded-[0.55rem] border border-light mr-2 sm:mr-0">
                 <img class="navbar-brand-logo" src="https://demo.themesberg.com/neumorphism-ui/assets/img/brand/dark.svg" alt="Logo light">
             </a>
 
             <div class="menu-items-desktop lg:block hidden">
                 <ul class="flex flex-row">
-                    <li class="nav-item p-2">
+                    <li class="nav-item">
                         <a href="#" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item p-2">
+                    <li class="nav-item">
                         <a href="#" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item p-2">
+                    <li class="nav-item">
                         <a href="#" class="nav-link">Skills</a>
                     </li>
-                    <li class="nav-item p-2">
+                    <li class="nav-item">
                         <a href="#" class="nav-link">Work</a>
                     </li>
-                    <li class="nav-item p-2">
+                    <li class="nav-item">
                         <a href="#" class="nav-link">Contact</a>
                     </li>
                 </ul>
@@ -27,10 +27,10 @@
 
             <div class="menu-actions">
                 <ul class="flex flex-row items-center">
-                    <li class="flex justify-center items-center mx-2 sm:mx-6 nav-item m-[1.5rem] p-2 min-w-[11rem]">
+                    <li class="flex justify-center items-center mx-2 lg:mx-6 nav-item p-2 min-w-[13rem]">
                         <a href="#" class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download CV</a>
                     </li>
-                    <li class="flex justify-center items-center mx-2 sm:mx-6 nav-item m-[1.5rem] p-2 min-w-fit lg:hidden">
+                    <li class="flex justify-center items-center mx-2 lg:mx-6 nav-item p-2 min-w-fit lg:hidden">
                         <input id="checkbox-hamburger-topnav" class="checkbox" type="checkbox" name="">
                         <div class="hamburger-lines">
                             <span class="line line1"/>
@@ -99,8 +99,6 @@ export default Vue.extend({
                     frame.forEach((x: any) => {
                         x.classList.remove('show')
                         x.classList.add('out')
-                        // frame.addEventListener('transitionend', x.classList.add('hidden'))
-                        // https://www.impressivewebs.com/animate-display-block-none/
                     })
                     vm.count.toggle++
                 }

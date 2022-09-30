@@ -1,6 +1,5 @@
 #neumorphism-navbar-main {    
     .navbar-brand {
-        margin: 0 1.5rem 0 1.5rem;
         font-size: .875rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -11,7 +10,7 @@
         border-style: none;
     }
     .nav-item {
-        // margin: 0 1.5rem 0 1.5rem;
+        padding: 1.5rem;
     }
     .nav-link {
         font-weight: 500;
@@ -120,7 +119,7 @@
         @keyframes show-navbar-collapse {
             0% {
                 opacity: 0;
-                transform: scale(.95);
+                transform: scale(.90);
                 transform-origin: 100% 0;
             }
             100% {
@@ -135,8 +134,9 @@
             }
             100% {
                 opacity: 0;
-                transform: scale(.95);
+                transform: scale(.90);
                 transform-origin: 100% 0;
+                visibility: hidden;
             }
         }
     }

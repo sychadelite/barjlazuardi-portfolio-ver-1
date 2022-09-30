@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="flex flex-col-reverse sm:flex-row gap-10 w-full justify-evenly sm:justify-between items-center lg:mt-[-7%]">
+        <div class="flex flex-col-reverse sm:flex-row gap-10 w-full justify-evenly sm:justify-between items-center xl:mt-[-10%]">
             <div class="flex flex-col gap-20 w-full sm:items-start mt-8 sm:mt-0">
                 <article class="prose lg:prose-xl">
                     <h1>Hi,<br>I'am<br><span class="text-[#008080]">Barj Lazuardi</span></h1>

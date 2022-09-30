@@ -4,6 +4,9 @@
         <div class="pt-[90px]">
             <Nuxt />
             <NavigationScrollTop/>
+            <div class="fixed bottom-0 left-0 m-8">
+                <p>{{ txtWidth }}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -21,8 +24,10 @@ export default Vue.extend({
     data() {
         return {
             windowWidth: 0,
+            txtWidth: '',
             count: {
-                responsive: 0
+                responsive: 0,
+                viewport: 0
             }
         }
     },
@@ -31,6 +36,9 @@ export default Vue.extend({
     },
     watch: {
         windowWidth(newWidth, oldWidth) {
+            this.txtWidth = `width: ${newWidth}px`
+
+            // element
             if (newWidth >= 1024) {
                 if (this.count.responsive % 2 === 0) {
                     const x = document.getElementsByClassName('menu-items-mobile')[0]
@@ -38,12 +46,21 @@ export default Vue.extend({
                     if (document.querySelectorAll('.menu-items-mobile.show').length === 0) {
                         x.classList.add('hidden')
                     }
-                    console.log('large: ', newWidth)
                     this.count.responsive = 1
                 }
             } else if (this.count.responsive % 2 === 1) {
-                console.log('small: ', newWidth)
                 this.count.responsive = 0
+            }
+
+            // viewport
+            if (newWidth <= 455) {
+                if (this.count.viewport % 2 === 0) {
+                    console.log('viewport changed: ', newWidth)
+                    return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=455')
+                }
+            } else if (this.count.viewport % 2 === 1) {
+                console.log('viewport changed: ', newWidth)
+                return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=device-width')
             }
         }
     },
@@ -80,6 +97,14 @@ export default Vue.extend({
             // resize listener
             this.windowWidth = window.innerWidth
             window.addEventListener('resize', this.onResize)
+        }
+    },
+    beforeMount() {
+        // viewport first time rendered listener
+        if (window.innerWidth > 455) {
+            return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=device-width')
+        } else {
+            return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=455')
         }
     },
     beforeDestroy() {
