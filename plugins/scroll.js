@@ -11,7 +11,7 @@ export default () => {
 
             sections.forEach((current) => {
                 var sectionHeight = current.offsetHeight
-                var sectionTop = current.offsetTop - 50
+                var sectionTop = current.offsetTop - 200
                 var sectionId = current.getAttribute('id')
 
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -27,7 +27,7 @@ export default () => {
         }
         window.addEventListener('scroll', scrollActive)
 
-        /* ===== SMOOTH SCROLL ANCHOR LINK ===== */
+        /* ==================== SMOOTH SCROLL ANCHOR LINK ===================== */
         var $root = $('html, body')
         $('a[href^="#"]').click(function() {
             var href = $.attr(this, 'href')
@@ -41,7 +41,7 @@ export default () => {
             return false
         })
 
-        // /* ===== SCROLL REVEAL ANIMATION ===== */
+        // /* =================== SCROLL REVEAL ANIMATION ===================== */
         // const sr = ScrollReveal({
         //     origin: 'top',
         //     distance: '60px',

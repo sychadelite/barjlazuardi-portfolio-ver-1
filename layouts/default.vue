@@ -1,8 +1,8 @@
 <template>
     <div>
         <NavigationTopNav />
-        <div class="pt-[90px]">
-            <Nuxt />
+        <div class="flex justify-center pt-[90px]">
+            <Nuxt class="max-w-[2000px]"/>
             <NavigationScrollTop/>
             <div class="fixed bottom-0 left-0 m-8">
                 <p>{{ txtWidth }}</p>

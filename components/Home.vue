@@ -14,10 +14,10 @@
                         <!-- Add the style and icon you want using the Array format -->
                         <a href="https://github.com/sychadelite/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'github']" /></a>
                         <a href="https://www.linkedin.com/in/barjlazuardi/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'linkedin']" /></a>
-                        <a href="https://www.facebook.com/barjlazuardi/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'facebook']" /></a>
+                        <!-- <a href="https://www.facebook.com/barjlazuardi/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'facebook']" /></a> -->
                         <a href="https://www.instagram.com/barjlazuardi/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'instagram']" /></a>
-                        <a href="https://www.twitter.com/themoltisanti/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'twitter']" /></a>
-                        <a href="https://www.discordapp.com/users/417678662633127937" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'discord']" /></a>
+                        <!-- <a href="https://www.twitter.com/themoltisanti/" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'twitter']" /></a> -->
+                        <!-- <a href="https://www.discordapp.com/users/417678662633127937" target="_blank" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'discord']" /></a> -->
                     </div>
                 </div>
             </div>
