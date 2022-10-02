@@ -7,7 +7,7 @@
 
             <div class="menu-items-desktop lg:block hidden">
                 <ul class="flex flex-row">
-                    <li class="nav-item home">
+                    <li class="nav-item home active">
                         <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item about">
@@ -44,7 +44,7 @@
             <!-- Mobile Menu Items -->
             <div class="menu-items-mobile hidden lg:hidden">
                 <ul class="flex flex-col">
-                    <li class="nav-item home p-2">
+                    <li class="nav-item home active p-2">
                         <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item about p-2">

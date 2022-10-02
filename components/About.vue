@@ -40,7 +40,9 @@
 
             <UtilitiesNeuCard />
 
-            <a href="#contact" class="btn btn-primary p-2 w-fit">About Me</a>
+            <a href="#contact">
+                <button class="btn btn-primary p-2 w-fit">About Me</button>
+            </a>
 
             <div class="flex flex-wrap mt-10 gap-10">
                 <!-- Add the style and icon you want using the String format -->
