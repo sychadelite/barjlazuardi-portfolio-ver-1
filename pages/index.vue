@@ -2,6 +2,9 @@
     <div>
         <Home />
         <About />
+        <Skills />
+        <Works />
+        <Contact />
     </div>
 </template>
 

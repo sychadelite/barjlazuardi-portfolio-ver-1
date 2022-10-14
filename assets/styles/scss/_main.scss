@@ -8,6 +8,11 @@
 @import '~assets/styles/scss/components/neu-scroll';
 @import '~assets/styles/scss/components/neu-topnav';
 
+*::selection {
+    background: $base-blue;
+    color: $soft-blue;
+}
+
 html {
     background-color: $neu-bg-base;
 	overflow-x: hidden;

@@ -1,26 +1,26 @@
 <template>
     <nav id="neumorphism-navbar-main" class="fixed flex justify-between items-center w-full h-[5.625rem] top-0 z-40 py-4 bg-transparent ease-in-out duration-200">
         <div class="relative flex justify-between items-center w-full max-h-[90px] mx-6 sm:mx-0">
-            <a href="#" class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] pt-[0.35rem] px-4 rounded-[0.55rem] border border-light mx-0 sm:mx-6">
+            <a class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] pt-[0.35rem] px-4 rounded-[0.55rem] border border-light mx-0 sm:mx-6">
                 <img class="navbar-brand-logo" src="https://demo.themesberg.com/neumorphism-ui/assets/img/brand/dark.svg" alt="Logo light">
             </a>
 
             <div class="menu-items-desktop lg:block hidden">
-                <ul class="flex flex-row">
+                <ul class="nav-content flex flex-row">
                     <li class="nav-item home">
-                        <a href="#home" class="nav-link">Home</a>
+                        <a class="nav-link" @click.prevent="toSection('home')">Home</a>
                     </li>
                     <li class="nav-item about">
-                        <a href="#about" class="nav-link">About</a>
+                        <a class="nav-link" @click.prevent="toSection('about')">About</a>
                     </li>
                     <li class="nav-item skills">
-                        <a href="#skills" class="nav-link">Skills</a>
+                        <a class="nav-link" @click.prevent="toSection('skills')">Skills</a>
                     </li>
                     <li class="nav-item work">
-                        <a href="#work" class="nav-link">Work</a>
+                        <a class="nav-link" @click.prevent="toSection('works')">Works</a>
                     </li>
                     <li class="nav-item contact">
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a class="nav-link" @click.prevent="toSection('contact')">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -28,7 +28,7 @@
             <div class="menu-actions lg:-mx-8">
                 <ul class="flex flex-row items-center">
                     <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-[13rem]">
-                        <a href="#" class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download CV</a>
+                        <a class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download CV</a>
                     </li>
                     <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-fit lg:hidden">
                         <input id="checkbox-hamburger-topnav" class="checkbox" type="checkbox" name="">
@@ -42,22 +42,22 @@
             </div>
 
             <!-- Mobile Menu Items -->
-            <div class="menu-items-mobile hidden lg:hidden">
-                <ul class="flex flex-col">
-                    <li class="nav-item home p-2">
-                        <a href="#home" class="nav-link">Home</a>
+            <div class="menu-items-mobile hidden lg:hidden dropdown-parent">
+                <ul class="nav-content flex flex-col dropdown-content">
+                    <li class="nav-item home p-2 dropdown-item" @click.prevent="toSection('home')">
+                        <a class="nav-link dropdown-link">Home</a>
                     </li>
-                    <li class="nav-item about p-2">
-                        <a href="#about" class="nav-link">About</a>
+                    <li class="nav-item about p-2 dropdown-item" @click.prevent="toSection('about')">
+                        <a class="nav-link dropdown-link">About</a>
                     </li>
-                    <li class="nav-item skills p-2">
-                        <a href="#skills" class="nav-link">Skills</a>
+                    <li class="nav-item skills p-2 dropdown-item" @click.prevent="toSection('skills')">
+                        <a class="nav-link dropdown-link">Skills</a>
                     </li>
-                    <li class="nav-item work p-2">
-                        <a href="#work" class="nav-link">Work</a>
+                    <li class="nav-item work p-2 dropdown-item" @click.prevent="toSection('works')">
+                        <a class="nav-link dropdown-link">Works</a>
                     </li>
-                    <li class="nav-item contact p-2">
-                        <a href="#contact" class="nav-link">Contact</a>
+                    <li class="nav-item contact p-2 dropdown-item" @click.prevent="toSection('contact')">
+                        <a class="nav-link dropdown-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -73,7 +73,8 @@ export default Vue.extend({
     data() {
         return {
             count: {
-                toggle: 0
+                toggle: 0,
+                sectionClick: 0
             }
         }
     },
@@ -108,6 +109,20 @@ export default Vue.extend({
     beforeDestroy() {
     },
     methods: {
+        toSection(id: string) {
+            this.count.sectionClick++
+            if (this.count.sectionClick === 1) {
+                const jump = () => {
+                    const el: any = document.getElementById(id)
+                    el.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                    clearTimeout(wait)
+                    this.count.sectionClick = 0
+                }
+                const wait = setTimeout(jump, 0)
+            }
+        }
     }
 })
 </script>

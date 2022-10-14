@@ -11,7 +11,7 @@ export default () => {
 
             sections.forEach((current) => {
                 var sectionHeight = current.offsetHeight
-                var sectionTop = current.offsetTop - 200
+                var sectionTop = current.offsetTop - 150
                 var sectionId = current.getAttribute('id')
 
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -26,6 +26,7 @@ export default () => {
             })
         }
         window.addEventListener('scroll', scrollActive)
+        window.addEventListener('load', scrollActive, false)
 
         /* ==================== SMOOTH SCROLL ANCHOR LINK ===================== */
         var $root = $('html, body')

@@ -1,26 +1,26 @@
 <template>
     <section id="about">
         <div class="flex flex-col gap-12 w-full">
-            <div class="flex flex-row flex-wrap w-full gap-20 justify-evenly sm:justify-between">
+            <div class="flex flex-row flex-wrap w-full gap-20 justify-start items-center sm:justify-between">
                 <img class="min-w-[16rem] min-h-[16rem] lg:max-w-[22rem] lg:max-h-[22rem] xl:max-w-[28rem] xl:max-h-[28rem] mt-8 sm:mt-0" src="@/assets/avatar/greet[bgremove].png" alt="greet" width="40%" height="40%">
                 <article class="prose lg:prose-xl lg:max-w-[48%]">
                     <h1>About&nbsp;<span class="text-[#008080]">Me</span></h1>
                     <p>
-                        I am 21 year old, BBIS student studied at Pradita University of Science and Technology studies.
+                        I am 21 year old, BBIS student currently studying at Pradita University of Science and Technology studies.
                         I really enjoy solving problems as well as making things pretty and easy to use.
-                        I can't stop learning new things; the more, the better.
-                        I also believe that nothing is impossible to implement in the system, it just requires an extra configuration.
+                        I can't stop learning and exploring new things; the more, the better.
+                        I also believe that nothing is impossible to implement in the system, for me it just requires an extra configuration.
                     </p>
                 </article>
             </div>
 
-            <div class="flex flex-row">
+            <!-- <div class="flex flex-row">
                 <div id="typed2-strings">
                     <p>Typed.js is a <strong>JavaScript</strong> library.</p>
                     <p>It <em>types</em> out sentences.</p>
                 </div>
                 <span id="typed2"/>
-            </div>
+            </div> -->
 
             <!-- <div class="flex flex-row">
                 <span id="typed1"></span>
@@ -38,18 +38,18 @@
                 <span id="typed6"/>
             </div> -->
 
-            <UtilitiesNeuCard />
+            <!-- <UtilitiesNeuCard /> -->
 
-            <a href="#contact" class="btn btn-primary p-2 w-fit">About Me</a>
+            <!-- <a href="#contact" class="btn btn-primary p-2 w-fit">About Me</a> -->
 
-            <div class="flex flex-wrap mt-10 gap-10">
-                <!-- Add the style and icon you want using the String format -->
-                <a href="#" class="neu-pill large pill-circle"><font-awesome-icon class="w-5" icon="fa-solid fa-user-secret"/></a>
-                <a href="#" class="neu-pill medium pill-circle"><font-awesome-icon class="w-5" icon="fa-brands fa-twitter"/></a>
-                <!-- Add the style and icon you want using the Array format -->
-                <a href="#" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fas', 'user-secret']"/></a>
-                <a href="#" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'twitter']"/></a>
-            </div>
+            <!-- <div class="flex flex-wrap mt-10 gap-10"> -->
+            <!-- Add the style and icon you want using the String format -->
+            <!-- <a href="#" class="neu-pill large pill-circle"><font-awesome-icon class="w-5" icon="fa-solid fa-user-secret"/></a> -->
+            <!-- <a href="#" class="neu-pill medium pill-circle"><font-awesome-icon class="w-5" icon="fa-brands fa-twitter"/></a> -->
+            <!-- Add the style and icon you want using the Array format -->
+            <!-- <a href="#" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fas', 'user-secret']"/></a> -->
+            <!-- <a href="#" class="neu-pill small pill-circle"><font-awesome-icon class="w-5" :icon="['fab', 'twitter']"/></a> -->
+            <!-- </div> -->
         </div>
     </section>
 </template>
@@ -72,11 +72,11 @@ export default Vue.extend({
                 // };
                 // var typed = new Typed('#typed1', options);
 
-                var typed2 = new Typed('#typed2', {
-                    stringsElement: '#typed2-strings',
-                    typeSpeed: 40,
-                    loop: true
-                })
+                // var typed2 = new Typed('#typed2', {
+                //     stringsElement: '#typed2-strings',
+                //     typeSpeed: 40,
+                //     loop: true
+                // })
 
                 // var typed3 = new Typed('#typed3', {
                 // // Waits 1000ms after typing "First"

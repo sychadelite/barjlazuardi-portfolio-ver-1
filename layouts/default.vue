@@ -75,8 +75,15 @@ export default Vue.extend({
         if (process.client) {
             // scroll listener
             var previousScroll = 0
+            // DOM detector
             const btn: any = document.getElementById('btnGoUp')
             const header: any = document.querySelector('#neumorphism-navbar-main')
+            const checkbox: any = document.getElementById('checkbox-hamburger-topnav')
+            const frame: any = document.querySelectorAll('.menu-items-mobile')
+            const frameChilds: any = document.querySelectorAll('.menu-items-mobile *')
+            const btnTouch: any = document.getElementById('btn-get-in-touch')
+            // global this
+            var vm = this
 
             window.addEventListener('scroll', function () {
                 var scroll: any = $(this).scrollTop()
@@ -102,6 +109,36 @@ export default Vue.extend({
             // resize listener
             this.windowWidth = window.innerWidth
             window.addEventListener('resize', this.onResize)
+
+            // detect all click event
+            document.addEventListener('click', function(e) {
+                e = e || window.event
+                const target: any = e.target || e.srcElement
+                const text = target.textContent || target.innerText
+
+                /* hide dropdown when document clicked
+                except event click on hamburger input & frame */
+                frame.forEach((x: any) => {
+                    if (x.classList.contains('show')) {
+                        if (target.id !== checkbox.id) {
+                            const parent = target.classList.contains('dropdown-parent')
+                            const content = target.classList.contains('dropdown-content')
+                            const item = target.classList.contains('dropdown-item')
+                            const link = target.classList.contains('dropdown-link')
+                            if (!parent && !content && !item && !link) {
+                                checkbox.click()
+                            }
+                        }
+                    }
+                })
+
+                /* invoke get in touch button status */
+                if (target.id === btnTouch.id) {
+                    vm.$root.$refs.home_component.statusTouch(true)
+                } else {
+                    vm.$root.$refs.home_component.statusTouch(false)
+                }
+            }, false)
         }
     },
     beforeMount() {
