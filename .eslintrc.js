@@ -20,7 +20,8 @@ module.exports = {
         'vue/html-closing-bracket-spacing': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         'no-var': 'off',
-        'nuxt/no-globals-in-created': 'off'
+        'nuxt/no-globals-in-created': 'off',
+        'vue/multi-word-component-names': 'off'
     }
 }
 

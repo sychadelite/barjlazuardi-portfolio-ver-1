@@ -16,12 +16,12 @@ export default () => {
 
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     // document.querySelector('a[href*=' + sectionId + ']').classList.add('active')
-                    document.querySelector('.menu-items-desktop .nav-item.' + sectionId).classList.add('active')
-                    document.querySelector('.menu-items-mobile .nav-item.' + sectionId).classList.add('active')
+                    document.querySelector('.menu-items-desktop .nav-content .nav-item.' + sectionId).classList.add('active')
+                    document.querySelector('.menu-items-mobile .nav-content .nav-item.' + sectionId).classList.add('active')
                 } else {
                     // document.querySelector('a[href*=' + sectionId + ']').classList.remove('active')
-                    document.querySelector('.menu-items-desktop .nav-item.' + sectionId).classList.remove('active')
-                    document.querySelector('.menu-items-mobile .nav-item.' + sectionId).classList.remove('active')
+                    document.querySelector('.menu-items-desktop .nav-content .nav-item.' + sectionId).classList.remove('active')
+                    document.querySelector('.menu-items-mobile .nav-content .nav-item.' + sectionId).classList.remove('active')
                 }
             })
         }

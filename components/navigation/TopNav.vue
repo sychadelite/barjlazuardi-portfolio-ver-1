@@ -16,7 +16,7 @@
                     <li class="nav-item skills">
                         <a class="nav-link" @click.prevent="toSection('skills')">Skills</a>
                     </li>
-                    <li class="nav-item work">
+                    <li class="nav-item works">
                         <a class="nav-link" @click.prevent="toSection('works')">Works</a>
                     </li>
                     <li class="nav-item contact">
@@ -53,7 +53,7 @@
                     <li class="nav-item skills p-2 dropdown-item" @click.prevent="toSection('skills')">
                         <a class="nav-link dropdown-link">Skills</a>
                     </li>
-                    <li class="nav-item work p-2 dropdown-item" @click.prevent="toSection('works')">
+                    <li class="nav-item works p-2 dropdown-item" @click.prevent="toSection('works')">
                         <a class="nav-link dropdown-link">Works</a>
                     </li>
                     <li class="nav-item contact p-2 dropdown-item" @click.prevent="toSection('contact')">
