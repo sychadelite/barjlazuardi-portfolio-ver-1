@@ -139,6 +139,9 @@ export default Vue.extend({
                     vm.$root.$refs.home_component.statusTouch(false)
                 }
             }, false)
+
+            // initial scroll position on first render
+            window.scroll(0, 0)
         }
     },
     beforeMount() {

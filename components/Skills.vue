@@ -4,6 +4,7 @@
             <div class="flex flex-row flex-wrap w-full gap-20 justify-start items-center sm:justify-between">
                 <article class="prose lg:prose-xl lg:max-w-[48%]">
                     <h1>My&nbsp;<span class="text-[#008080]">Skills</span></h1>
+                    <p>Another One</p>
                 </article>
             </div>
         </div>

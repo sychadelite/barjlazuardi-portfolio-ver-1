@@ -1,7 +1,7 @@
 
 body {
   scroll-behavior: smooth;
-  --scrollbar-track: initial;
+  --scrollbar-track: transparent;
   --scrollbar-thumb: initial;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   overflow: overlay;
