@@ -1,11 +1,13 @@
 <template>
     <div>
         <NavigationTopNav />
+        <NavigationRightNav/>
         <div class="flex justify-center pt-[90px]">
             <Nuxt class="max-w-[2000px]"/>
             <NavigationScrollTop/>
             <div class="fixed bottom-0 left-0 m-8">
                 <p>{{ txtWidth }}</p>
+                <p>{{ txtHeight }}</p>
             </div>
         </div>
     </div>
@@ -24,7 +26,9 @@ export default Vue.extend({
     data() {
         return {
             windowWidth: 0,
+            windowHeight: 0,
             txtWidth: '',
+            txtHeight: '',
             count: {
                 responsive: 0,
                 viewport: 0
@@ -67,6 +71,9 @@ export default Vue.extend({
                 this.count.viewport = 0
                 return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=device-width')
             }
+        },
+        windowHeight(newHeight, oldHeight) {
+            this.txtHeight = `height: ${newHeight}px`
         }
     },
     mounted() {},
@@ -108,6 +115,7 @@ export default Vue.extend({
 
             // resize listener
             this.windowWidth = window.innerWidth
+            this.windowHeight = window.innerHeight
             window.addEventListener('resize', this.onResize)
 
             // detect all click event
@@ -141,7 +149,7 @@ export default Vue.extend({
             }, false)
 
             // initial scroll position on first render
-            window.scroll(0, 0)
+            // window.scroll(0, 0)
         }
     },
     beforeMount() {
@@ -158,6 +166,7 @@ export default Vue.extend({
     methods: {
         onResize() {
             this.windowWidth = window.innerWidth
+            this.windowHeight = window.innerHeight
         }
     }
 })

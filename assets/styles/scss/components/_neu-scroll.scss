@@ -1,7 +1,7 @@
 
 body {
   scroll-behavior: smooth;
-  --scrollbar-track: transparent;
+  --scrollbar-track: initial;
   --scrollbar-thumb: initial;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   overflow: overlay;
@@ -25,14 +25,14 @@ body::-webkit-scrollbar-track {
 
 
 body.dark::-webkit-scrollbar {
-  width: 16px;
-  height: 16px;
+  width: 8px;
+  height: 8px;
 }
 body.dark::-webkit-scrollbar-thumb {
   background: #434343;
-  border-radius: 16px;
+  border-radius: 0.25rem;
   box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
 }
 body.dark::-webkit-scrollbar-track {
-  background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+  background: linear-gradient(90deg,#434343,#434343 1px,$color-dark-primary 0,$color-dark-primary);
 }

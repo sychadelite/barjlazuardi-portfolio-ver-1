@@ -9,13 +9,16 @@
 @import '~assets/styles/scss/components/neu-topnav';
 
 *::selection {
-    background: $base-blue;
-    color: $soft-blue;
+    background: $color-secondary-shade;
+    color: $color-secondary-tint;
 }
 
 html {
-    background-color: $neu-bg-base;
 	overflow-x: hidden;
+}
+
+body {
+	background-color: $color-primary;
 }
 
 section {
@@ -36,10 +39,30 @@ section > div {
 }
 
 a {
-	color: $neu-col-black;
+	color: $black;
 	text-decoration: none;
 	background-color: transparent;
 	cursor: pointer;
+}
+
+.neu-bg {
+	box-sizing: border-box;
+	border: 1px solid $color-primary-shade;
+	border-color: $color-primary-shade;
+    box-shadow: 3px 3px 6px $color-secondary, -3px -3px 6px $white;
+	overflow: hidden;
+}
+
+/* DARK THEME */
+body.dark {
+	background-color: $color-dark-primary;
+	h1,
+	h4 {
+		color: $color-dark-primary-tint;
+	}
+	p {
+		color: $color-dark-tertiary-shade;
+	}
 }
 
 

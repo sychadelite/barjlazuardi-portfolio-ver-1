@@ -1,23 +1,74 @@
-// white
-$white: rgb(255, 255, 255);
+/* ROOT COLOR */
+$blue: #0056B3;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #A91E2C;
+$orange: #fd7e14;
+$yellow: #F0B400;
+$green: #18634B;
+$teal: #0056B3;
+$cyan: #17a2b8;
+$white: #ECF0F3;
+$gray: #93a5be;
+$gray-dark: #525480;
+$primary: #e6e7ee;
+$secondary: #2D4CC8;
+$success: #18634B;
+$info: #0056B3;
+$warning: #F0B400;
+$danger: #A91E2C;
+$light: #D1D9E6;
+$dark: #31344b;
+$default: #262833;
+$white: #ECF0F3;
+$gray: #44476A;
+$neutral: #ECF0F3;
+$soft: #e6e7ee;
+$black: #262833;
+$purple: #6f42c1;
+$gray-100: #f3f7fa;
+$gray-200: #fafbfe;
+$gray-300: #e6e7ee;
+$gray-400: #D1D9E6;
+$gray-500: #b1bcce;
+$gray-600: #93a5be;
+$gray-700: #66799e;
+$gray-800: #525480;
+$facebook: #3b5999;
+$dribbble: #ea4c89;
+$github: #222222;
+$behance: #0057ff;
+$twitter: #1da1f2;
+$slack: #3aaf85;
 
-// black
-$black: rgb(51, 51, 51);
+/* NEUMORPHISM */
+$color-primary: #e6e7ee;
+$color-primary-shade: #d1d9e6;
+$color-primary-tint: #fafbfe;
 
-// green
-$dark-green: rgb(37, 84, 97);
+$color-secondary: #b8b9be;
+$color-secondary-shade: rgb(163, 177, 198);
+$color-secondary-tint: rgb(224, 239, 236);
 
-// blue
-$blue: rgb(43, 43, 156);
-$base-blue: rgb(163, 177, 198);
-$soft-blue: rgb(224, 239, 236);
+$color-tertiary: #5260ff;
+$color-tertiary-shade: #4854e0;
+$color-tertiary-tint: #6370ff;
 
+$color-success: #18634b;
+$color-warning: #2d4cc8;
+$color-info: #0056b3;
+$color-danger: #a91e2c;
 
-// neumorphism
-$neu-bg-base: #e6e7ee;
+/* DARK LORD */
+$color-dark-primary: #19293c;
+$color-dark-primary-shade: #95b0e4;
+$color-dark-primary-tint: #DFF6FF;
 
-$neu-border-base: #fafbfe;
-$neu-border-light: #d1d9e6;
-$neu-shadow-soft: #b8b9be;
+$color-dark-secondary: #0b1522;
+$color-dark-secondary-shade: #121c29;
+$color-dark-secondary-tint: #647fb1;
 
-$neu-col-black: #31344b;
+$color-dark-tertiary: #0d2a50;
+$color-dark-tertiary-shade: #9eb1ca;
+$color-dark-tertiary-tint: #b5cdec;

@@ -1,8 +1,8 @@
 <template>
-    <nav id="neumorphism-navbar-main" class="fixed flex justify-between items-center w-full h-[5.625rem] top-0 z-40 py-4 bg-transparent ease-in-out duration-200">
+    <nav id="neumorphism-navbar-main" class="fixed flex justify-between items-center w-full h-[5.625rem] top-0 z-50 py-4 bg-transparent ease-in-out duration-200">
         <div class="relative flex justify-between items-center w-full max-h-[90px] mx-6 sm:mx-0">
-            <a class="navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] pt-[0.35rem] px-4 rounded-[0.55rem] border border-light mx-0 sm:mx-6">
-                <img class="navbar-brand-logo" src="https://demo.themesberg.com/neumorphism-ui/assets/img/brand/dark.svg" alt="Logo light">
+            <a class="flex justify-center items-center navbar-brand shadow-soft w-[50px] h-[40px] min-w-[50px] rounded-[0.55rem] border border-light mx-0 sm:mx-6">
+                <h1 class="navbar-brand-logo text-2xl">B</h1>
             </a>
 
             <div class="menu-items-desktop lg:block hidden">
@@ -28,7 +28,10 @@
             <div class="menu-actions lg:-mx-8">
                 <ul class="flex flex-row items-center">
                     <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-[13rem]">
-                        <a class="btn btn-primary p-2 w-fit flex justify-center items-center"><font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />&nbsp;&nbsp;Download CV</a>
+                        <a class="btn btn-primary p-2 w-fit flex justify-center items-center" @click.prevent="download('pdf')">
+                            <font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />
+                            &nbsp;&nbsp;Download CV
+                        </a>
                     </li>
                     <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-fit lg:hidden">
                         <input id="checkbox-hamburger-topnav" class="checkbox" type="checkbox" name="">
@@ -75,12 +78,16 @@ export default Vue.extend({
             count: {
                 toggle: 0,
                 sectionClick: 0
-            }
+            },
+            audio: null as any
+        }
+    },
+    computed: {
+        isSoundEnabled() {
+            return this.$store.state.isSoundEnabled
         }
     },
     mounted() {
-        // const element = document.getElementsByTagName('html')[0] as HTMLElement
-        // element.setAttribute('class', 'dark')
     },
     created() {
         if (process.client) {
@@ -121,6 +128,23 @@ export default Vue.extend({
                     this.count.sectionClick = 0
                 }
                 const wait = setTimeout(jump, 0)
+            }
+        },
+        download(context: string) {
+            if (context === 'pdf') {
+                // window.open('/assets/document/barjcv.pdf')
+                fetch('/assets/document/barjcv.pdf').then(response => response.blob()).then((blob) => {
+                    const url = window.URL.createObjectURL(blob)
+                    const el = document.createElement('a')
+                    el.style.display = 'none'
+                    el.href = url
+                    // the filename you want
+                    el.download = 'barj_cv.pdf'
+                    document.body.appendChild(el)
+                    el.click()
+                    window.URL.revokeObjectURL(url)
+                    alert('your file has downloaded!') // or you know, something with better UX...
+                }).catch(() => alert('oh no!'))
             }
         }
     }

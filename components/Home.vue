@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <img class="max-w-[28rem] max-h-[28rem] min-w-[16rem] min-h-[16rem] mt-8 sm:mt-0" src="@/assets/avatar/sendlove[bgfocus].gif" alt="avatar" width="50%" height="50%">
+            <img class="max-w-[28rem] max-h-[28rem] min-w-[16rem] min-h-[16rem] mt-8 sm:mt-0" src="@/assets/avatar/sendlove[bgremove].gif" alt="avatar" width="65%" height="65%">
         </div>
     </section>
 </template>
@@ -64,7 +64,7 @@ export default Vue.extend({
                     clearTimeout(wait)
                     this.count.sectionClick = 0
                 }
-                const wait = this.status.touch ? setTimeout(jump, 0) : setTimeout(jump, 1750)
+                const wait = this.status.touch ? setTimeout(jump, 0) : setTimeout(jump, 0)
                 console.log(this.status.touch)
             }
         }

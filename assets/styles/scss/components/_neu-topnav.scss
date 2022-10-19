@@ -5,9 +5,7 @@
         text-transform: uppercase;
     }
     .navbar-brand-logo {
-        height: 25px;
-        vertical-align: middle;
-        border-style: none;
+        color: $dark;
     }
     .menu-items-desktop {
         .nav-item {
@@ -17,7 +15,7 @@
             border-radius: 50%;
             &:hover {
                 .nav-link {
-                    color: teal;
+                    color: $green;
                 }
             }
             &.active {
@@ -25,7 +23,7 @@
                 border-bottom: 0.1rem solid #111827;
                 border-radius: 50%;
                 .nav-link {
-                    color: teal;
+                    color: $green;
                 }
             }
         }
@@ -36,13 +34,13 @@
             border-bottom: 0.1rem solid transparent;
             &:hover {
                 .nav-link {
-                    color: teal;
+                    color: $green;
                 }
             }
             &.active {
                 border-bottom: 0.1rem solid #111827;
                 .nav-link {
-                    color: teal;
+                    color: $green;
                 }
             }
         }
@@ -52,20 +50,17 @@
         font-weight: 600;
     }
     .nav-link:hover {
-        color: $neu-col-black;
+        color: $black;
     }
 
     .border {
-        border: 0.0625rem solid $neu-border-base;
+        border: 0.0625rem solid $color-primary-tint;
     }
     .border-light {
-        border-color: $neu-border-light;
+        border-color: $color-primary-shade;
     }
     .shadow-soft {
-        box-shadow: 6px 6px 12px $neu-shadow-soft,-6px -6px 12px #fff;
-    }
-    [class*=shadow] {
-        transition: all .2s ease;
+        box-shadow: 6px 6px 12px $color-secondary, -6px -6px 12px $white;
     }
 
 
@@ -91,7 +86,7 @@
                 height: 4px;
                 width: 100%;
                 border-radius: 10px;
-                background: #0e2431;
+                background: $black;
             }
             .line1 {
                 transform-origin: 0% 0%;
@@ -126,10 +121,10 @@
         right: 0;
         left: 0;
         padding: 1.5rem;
-        color: #31344b;
+        color: $black;
         border-radius: 0.55rem;
-        background: #e6e7ee;
-        box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+        background: $color-primary;
+        box-shadow: 6px 6px 12px $color-secondary, -6px -6px 12px $white;
         height: fit-content;
         max-height: calc(100vh - 30px);
         margin: 7rem 15% 7rem 15%;
@@ -179,8 +174,43 @@
 }
 
 #neumorphism-navbar-main.unpinned {
-    box-shadow: 6px 6px 12px $neu-shadow-soft, -6px -6px 12px #fff;
+    box-shadow: 6px 6px 12px $color-secondary, -6px -6px 12px #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: $neu-bg-base;
+    background-color: $color-primary;
+}
+
+/* DARK LORD */
+body.dark {
+    #neumorphism-navbar-main.unpinned {
+        background-color: $color-dark-primary !important
+    }
+    .border {
+        border: 0.0625rem solid $color-primary-tint !important;
+    }
+    .border-light {
+        border-color: $color-dark-primary-tint !important;
+    }
+    .shadow-soft {
+        box-shadow: 6px 6px 12px $color-dark-secondary, -6px -6px 12px $color-dark-secondary-shade !important;
+    }
+    .navbar-brand-logo {
+        color: $color-dark-primary-tint !important;
+    }
+    .nav-item {
+        &:hover {
+            .nav-link {
+                color: $color-dark-primary-shade !important;
+            }
+        }
+        &.active {
+            border-bottom: 0.1rem solid #111827;
+            .nav-link {
+                color: $color-dark-primary-shade !important;
+            }
+        }
+        .nav-link {
+            color: $color-dark-primary-tint !important;
+        }
+    }
 }
