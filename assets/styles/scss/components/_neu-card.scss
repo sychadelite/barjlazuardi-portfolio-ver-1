@@ -22,7 +22,7 @@
 		width: 12px;
 		-webkit-appearance: none;
 		&-thumb {
-			background-color: rgba(108, 121, 119, 0.44);
+			background-color: $gray-900;
 			border: 2px solid $white;
 			border-radius: 1rem;
 		}

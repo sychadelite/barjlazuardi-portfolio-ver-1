@@ -141,7 +141,7 @@
             width: 12px;
             -webkit-appearance: none;
             &-thumb {
-                background-color: rgba(108, 121, 119, 0.44);
+                background-color: $gray-900;
                 border: 2px solid $white;
                 border-radius: 1rem;
             }
@@ -182,35 +182,84 @@
 
 /* DARK LORD */
 body.dark {
+    #neumorphism-navbar-main {
+        .border {
+            border: 0.0625rem solid $color-primary-tint;
+        }
+        .border-light {
+            border-color: $color-dark-primary-tint;
+        }
+        .shadow-soft {
+            box-shadow: 6px 6px 12px $color-dark-secondary, -6px -6px 12px $color-dark-secondary-shade;
+        }
+        .navbar-brand-logo {
+            color: $color-dark-primary-tint;
+        }
+
+        .menu-items-desktop {
+            .nav-item {
+                &:hover {
+                    .nav-link {
+                        color: $color-dark-primary-shade;
+                    }
+                }
+                &.active {
+                    border-top: 0.1rem solid $color-dark-tertiary-tint;
+                    border-bottom: 0.1rem solid $color-dark-tertiary-tint;
+                    .nav-link {
+                        color: $color-dark-primary-shade;
+                    }
+                }
+                .nav-link {
+                    color: $color-dark-primary-tint;
+                }
+            }
+        }
+        .menu-items-mobile {
+            .nav-item {
+                &:hover {
+                    .nav-link {
+                        color: $color-dark-primary-shade;
+                    }
+                }
+                &.active {
+                    border-bottom: 0.1rem solid $color-dark-tertiary-tint;
+                    .nav-link {
+                        color: $color-dark-primary-shade;
+                    }
+                }
+                .nav-link {
+                    color: $color-dark-primary-tint;
+                }
+            }
+        }
+
+        .menu-actions {
+            .hamburger-lines {    
+                .line {
+                    background: $color-dark-primary-tint;
+                }
+            }
+        }
+
+        .menu-items-mobile {
+            color: $black;
+            background: $color-dark-primary;
+            box-shadow: 6px 6px 12px $color-dark-secondary, -6px -6px 12px $black;
+
+            &::-webkit-scrollbar {
+                width: 12px;
+                -webkit-appearance: none;
+                &-thumb {
+                    background-color: $gray-900;
+                    border: 2px solid $black;
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+
     #neumorphism-navbar-main.unpinned {
-        background-color: $color-dark-primary !important
-    }
-    .border {
-        border: 0.0625rem solid $color-primary-tint !important;
-    }
-    .border-light {
-        border-color: $color-dark-primary-tint !important;
-    }
-    .shadow-soft {
-        box-shadow: 6px 6px 12px $color-dark-secondary, -6px -6px 12px $color-dark-secondary-shade !important;
-    }
-    .navbar-brand-logo {
-        color: $color-dark-primary-tint !important;
-    }
-    .nav-item {
-        &:hover {
-            .nav-link {
-                color: $color-dark-primary-shade !important;
-            }
-        }
-        &.active {
-            border-bottom: 0.1rem solid #111827;
-            .nav-link {
-                color: $color-dark-primary-shade !important;
-            }
-        }
-        .nav-link {
-            color: $color-dark-primary-tint !important;
-        }
+        background-color: $color-dark-primary
     }
 }
