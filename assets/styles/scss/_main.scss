@@ -56,13 +56,16 @@ a {
 /* DARK THEME */
 body.dark {
 	background-color: $color-dark-primary;
-	h1,
-	h4 {
+	h1, h4 {
 		color: $color-dark-primary-tint;
 	}
 	p {
 		color: $color-dark-tertiary-shade;
 	}
+
+	.neu-bg {
+		border: 1px solid $color-dark-primary-shade;
+		border-color: $dark;
+		box-shadow: 3px 3px 6px $color-dark-secondary, -3px -3px 6px $black;
+	}
 }
-
-

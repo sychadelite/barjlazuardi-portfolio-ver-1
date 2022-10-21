@@ -2,17 +2,17 @@
     display: flex;
     text-align: center;
     padding: 0;
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+    box-shadow: 6px 6px 12px $color-secondary, -6px -6px 12px $white;
     align-items: center;
     justify-content: center;
     transition: all .2s ease;
     border: 1px solid $color-primary-shade;
 
     &:hover {
-        color: #31344b;
-        background-color: #e6e7ee;
+        color: $dark;
+        background-color: $color-primary;
         border-color: $color-primary-shade;
-        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+        box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
     }
 
     &.large {
@@ -42,13 +42,26 @@
 /* DARK THEME */
 body.dark {
     .neu-pill {
-        color: $white;
+        color: $color-dark-primary-tint;
         background-color: $color-dark-primary;
+        box-shadow: 6px 6px 12px $color-dark-secondary, -6px -6px 12px $color-dark-secondary-shade;
+        border: 1px solid $dark;
         &:hover {
-            color: #31344b;
-            background-color: #e6e7ee;
-            border-color: $color-dark-primary-shade;
-            box-shadow: inset 2px 2px 5px $color-primary-shade, inset -3px -3px 7px $color-dark-secondary-shade;
+            color: $color-dark-primary-tint;
+            background-color: transparent;
+            border-color: $dark;
+            box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $color-dark-secondary-shade;
         }
     }
+
+    // .neu-pill {
+    //     color: $white;
+    //     background-color: $color-dark-primary;
+    //     &:hover {
+    //         color: #31344b;
+    //         background-color: #e6e7ee;
+    //         border-color: $color-dark-primary-shade;
+    //         box-shadow: inset 2px 2px 5px $color-primary-shade, inset -3px -3px 7px $color-dark-secondary-shade;
+    //     }
+    // }
 }

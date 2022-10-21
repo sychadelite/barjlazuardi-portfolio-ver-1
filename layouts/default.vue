@@ -42,13 +42,13 @@ export default Vue.extend({
         windowWidth(newWidth, oldWidth) {
             this.txtWidth = `width: ${newWidth}px`
 
-            // element
+            /* element */
             if (newWidth >= 1024) {
                 if (this.count.responsive % 2 === 0) {
                     const x = document.getElementsByClassName('menu-items-mobile')[0]
-                    x.classList.remove('out')
+                    x.classList.remove('out') // animation behavior
                     if (document.querySelectorAll('.menu-items-mobile.show').length === 0) {
-                        x.classList.add('hidden')
+                        x.classList.add('hidden') // animation behavior
                     }
                     this.count.responsive = 1
                 }
@@ -56,12 +56,12 @@ export default Vue.extend({
                 this.count.responsive = 0
             }
 
-            // viewport
+            /* viewport */
             // bugs viewport device-width on: 420px, 419px, 405px, 400px, 393px, 370px, 210px, 200px, 185px
             if (newWidth <= 455) {
                 if (this.count.viewport % 2 === 0) {
                     if (newWidth === 420 || newWidth === 419 || newWidth === 405 || newWidth === 400 || newWidth === 393 || newWidth === 370 || newWidth === 210 || newWidth === 200 || newWidth === 185) {
-                        console.log('asd')
+                        console.log('bugs on viewport ...')
                     } else {
                         this.count.viewport = 1
                         return $('meta[name=viewport]').attr('content', 'user-scalable=no, maximum-scale=1, width=455')

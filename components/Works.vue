@@ -4,6 +4,10 @@
             <div class="flex flex-row flex-wrap w-full gap-20 justify-start items-center sm:justify-between">
                 <article class="prose lg:prose-xl lg:max-w-[48%]">
                     <h1>My&nbsp;<span class="text-[#008080]">Works</span></h1>
+                    <!-- <div> -->
+                    <!-- <embed src="~/assets/document/barjcv.pdf" width="1440px" height="900px" > -->
+                    <!-- <audio src="_nuxt/assets/audio/Where-the-Shadows-Lie.mp3" controls loop/> -->
+                    <!-- </div> -->
                 </article>
             </div>
         </div>

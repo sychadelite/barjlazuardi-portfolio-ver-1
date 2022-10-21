@@ -132,8 +132,9 @@ export default Vue.extend({
         },
         download(context: string) {
             if (context === 'pdf') {
-                // window.open('/assets/document/barjcv.pdf')
-                fetch('/assets/document/barjcv.pdf').then(response => response.blob()).then((blob) => {
+                const rop = 'rop-album.jpg'
+                window.open(require(`~/assets/image/sound/${rop}`))
+                /* fetch('/assets/document/barjcv.pdf').then(response => response.blob()).then((blob) => {
                     const url = window.URL.createObjectURL(blob)
                     const el = document.createElement('a')
                     el.style.display = 'none'
@@ -145,6 +146,28 @@ export default Vue.extend({
                     window.URL.revokeObjectURL(url)
                     alert('your file has downloaded!') // or you know, something with better UX...
                 }).catch(() => alert('oh no!'))
+
+                const data = `name,email,twitter
+                Barj,hashiramakun58@gmail.com,@themoltisanti,
+                Rossa,fitrierossa@gmail.com,@ftriern`
+                const blob = new Blob([data], { type: 'octet-stream' }) */
+
+                // const data = '/assets/document/barjcv.pdf'
+                // const blob = new Blob([data], { type: 'pdf' })
+                // // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+                // const href = URL.createObjectURL(blob)
+                // // blob:http://localhost:3000/fcd6adaf-40a8-4730-b18a-1b9362a33283
+
+                // const a = Object.assign(document.createElement('a'), {
+                //     href,
+                //     style: 'display: none',
+                //     download: 'myData.pdf'
+                // })
+                // document.body.appendChild(a)
+
+                // a.click()
+                // URL.revokeObjectURL(href)
+                // a.remove()
             }
         }
     }

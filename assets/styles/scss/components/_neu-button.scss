@@ -5,12 +5,12 @@
     border-radius: 0.55rem;
 
     &:hover {
-        color: #44476a;
+        color: $gray;
         text-decoration: none;
     }
     &:focus,
     &:active {
-        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px $white;
+        box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
     }
 }
 .btn-primary {
@@ -18,14 +18,14 @@
     background-color: $color-primary;
 
     &:hover {
-        color: #31344b;
-        background-color: #e6e7ee;
-        border-color: #e6e7ee;
-        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px $white;
+        color: $dark;
+        background-color: $color-primary;
+        border-color: $color-primary;
+        box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
     }
     &:focus,
     &:active {
-        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px $white;
+        box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
     }
 }
 
@@ -52,10 +52,10 @@ a.btn-animate {
     &:active {
         width: 200px;
         transition-delay: 0.5s;
-        color: #31344b;
-        background-color: #e6e7ee;
-        border-color: #e6e7ee;
-        box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px $white;
+        color: $dark;
+        background-color: $color-primary;
+        border-color: $color-primary;
+        box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
     }
     
     &::before {
@@ -110,29 +110,51 @@ a.btn-animate {
 
 
 body.dark {
+    .btn {
+        border-color: $color-dark-primary-shade;
+        box-shadow: 3px 3px 6px $color-dark-secondary, -3px -3px 6px $black;    
+        &:hover {
+            color: $color-dark-primary-tint;
+            text-decoration: none;
+        }
+        &:focus,
+        &:active {
+            box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $black;
+        }
+    }
     .btn-primary {
-        color: $color-dark-primary-tint !important;
-        background-color: $color-dark-primary !important;
-        border-color: $color-dark-primary-shade !important;
+        color: $white;
+        background-color: $color-dark-primary;
+        border-color: $color-dark-primary-shade;
+        &:hover {
+            color: $color-dark-primary-tint;
+            background-color: $color-dark-primary;
+            border-color: $color-dark-primary;
+            box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $black;
+        }
+        &:focus,
+        &:active {
+            box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $black;
+        }
     }
 
     a.btn-animate {
-        color: $color-dark-primary-tint !important;
-        background-color: $color-dark-primary !important;
-        border-color: $color-dark-primary-shade !important;
-        box-shadow: 3px 3px 6px $color-dark-secondary, -3px -3px 6px $color-dark-secondary-shade !important;
+        color: $color-dark-primary-tint;
+        background-color: $color-dark-primary;
+        border-color: $color-dark-primary-shade;
+        box-shadow: 3px 3px 6px $color-dark-secondary, -3px -3px 6px $color-dark-secondary-shade;
         &:hover,
         &:focus,
         &:active {
-            color: $color-dark-primary-tint !important;
-            background-color: transparent !important;
-            border-color: $color-dark-primary-shade !important;
-            box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $color-dark-secondary-shade !important;
+            color: $color-dark-primary-tint;
+            background-color: transparent;
+            border-color: $color-dark-primary-shade;
+            box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $color-dark-secondary-shade;
         }
         &::before,
         &::after {
-            border-top: 3px solid $color-dark-primary-tint !important;
-            border-right: 3px solid $color-dark-primary-tint !important;
+            border-top: 3px solid $color-dark-primary-tint;
+            border-right: 3px solid $color-dark-primary-tint;
         }
     }
 }

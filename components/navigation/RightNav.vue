@@ -1,7 +1,7 @@
 <template>
-    <nav id="neumorphism-rightnav" class="fixed flex gap-2 justify-right items-center top-0 right-0 w-32 h-[100%] z-40 py-4 bg-transparent ease-in-out duration-200">
+    <nav id="neumorphism-rightnav" class="fixed flex gap-2 justify-right items-center top-0 right-0 w-10 lg:w-32 h-[100%] z-40 py-4 bg-transparent ease-in-out duration-200">
         <a class="btn btn-primary p-2 w-fit flex justify-center items-center" @click.prevent="toggleExpand()">
-            <font-awesome-icon id="rightnav-icon-expand" class="w-4 h-4 rotate-180 ease-in-out duration-700" icon="fa-sharp fa-solid fa-arrow-left-from-line" />
+            <font-awesome-icon id="rightnav-icon-expand" class="w-4 h-4 rotate-0 lg:rotate-180 ease-in-out duration-700" icon="fa-sharp fa-solid fa-arrow-left-from-line" />
         </a>
         <div class="flex flex-col gap-6 justify-center items-center mx-0 mx-4 p-4 min-w-fit rounded-md neu-bg">
             <a class="btn btn-primary p-2 w-fit flex justify-center items-center" @click.prevent="toggleSound()">
@@ -23,12 +23,25 @@ export default Vue.extend({
     name: 'NavigationRightNavComponent',
     data() {
         return {
-            count: {
-                expand: 0
-            },
             isOpened: false,
+            theme: 'light',
+
             audio: null as any,
-            theme: 'light'
+
+            tracks: [
+                {
+                    id: 1,
+                    name: 'The Rings of Power Opening Intro Theme Song',
+                    src: 'The-Rings-of-Power-Opening-Intro-Theme-Song.mp3',
+                    icon: '@/assets/image/sound/rop-album.jpg'
+                },
+                {
+                    id: 2,
+                    name: 'Where the Shadows Lie',
+                    src: 'Where-the-Shadows-Lie.mp3',
+                    icon: '@/assets/image/sound/rop-album.jpg'
+                }
+            ]
         }
     },
     computed: {
@@ -37,28 +50,27 @@ export default Vue.extend({
         }
     },
     mounted() {
-        this.$store.commit('initializeSound')
-        const audioFile = require('@/assets/audio/The-Rings-of-Power-Opening-Intro-Theme-Song.mp3').default
-        this.audio = new Audio(audioFile)
         localStorage.setItem('isSoundEnabled', 'false')
         this.$store.commit('initializeSound')
     },
     created() {
         if (process.client) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                this.theme = 'dark'
-                this.toggleTheme()
-            }
+            return true
+        }
+    },
+    beforeMount() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            this.theme = 'light'
+            this.toggleTheme()
         }
     },
     beforeDestroy() {
     },
     methods: {
         toggleExpand() {
-            this.count.expand++
             const el: any = document.getElementById('neumorphism-rightnav')
             const svg: any = document.getElementById('rightnav-icon-expand')
-            if (this.count.expand % 2 === 1) {
+            if (el.offsetWidth / 16 === 8) {
                 el.style.width = '2.5rem'
                 svg.style.transform = 'rotate(0deg)'
             } else {
@@ -78,10 +90,15 @@ export default Vue.extend({
         },
         toggleSound() {
             this.$store.commit('toggleSound')
-            this.playSound()
+            const index = Math.floor(Math.random() * this.tracks.length)
+            this.playSound(index)
         },
-        playSound() {
+        playSound(vol: number) {
+            // https://developer.chrome.com/blog/play-request-was-interrupted/
             if (this.isSoundEnabled) {
+                const audioFile = require(`@/assets/audio/${this.tracks[vol].src}`).default
+                this.audio = new Audio(audioFile)
+                this.audio.loop = true
                 this.audio.play()
             } else {
                 this.audio.pause()

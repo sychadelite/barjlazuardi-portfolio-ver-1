@@ -79,6 +79,18 @@ export default {
                 autoprefixer: {}
             }
         },
+        // https://nuxtjs.org/docs/features/configuration/
+        loaders: {
+            vue: {
+                transformAssetUrls: {
+                    // audio: 'src',
+                    // video: 'src',
+                    // source: 'src',
+                    // object: 'src',
+                    // embed: 'src'
+                }
+            }
+        },
         // https://davidparks.dev/blog/add-sounds-to-your-nuxt-site/
         extend(config, ctx) {
             config.module.rules.push({

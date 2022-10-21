@@ -65,7 +65,6 @@ export default Vue.extend({
                     this.count.sectionClick = 0
                 }
                 const wait = this.status.touch ? setTimeout(jump, 0) : setTimeout(jump, 0)
-                console.log(this.status.touch)
             }
         }
     }
