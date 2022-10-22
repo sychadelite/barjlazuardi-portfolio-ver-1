@@ -8,6 +8,10 @@
                     <!-- <embed src="~/assets/document/barjcv.pdf" width="1440px" height="900px" > -->
                     <!-- <audio src="_nuxt/assets/audio/Where-the-Shadows-Lie.mp3" controls loop/> -->
                     <!-- </div> -->
+                    <div>
+                    <a href="/barjcv.pdf" download>download pdf</a>
+                    <a href="/barjcv.pdf" target="_blank">preview pdf</a>
+                    </div>
                 </article>
             </div>
         </div>
