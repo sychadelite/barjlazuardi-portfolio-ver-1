@@ -1,7 +1,7 @@
 <template>
-    <div class="neumorphism-card">
+    <div class="neumorphism-card-v1">
         <section>
-            <div>asd</div>
+            <div>Neumorphism Card V1</div>
         </section>
     </div>
 </template>
@@ -10,7 +10,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-    name: 'UtilitiesNeuCard'
+    name: 'UtilitiesNeuCardV2'
 })
 </script>
 

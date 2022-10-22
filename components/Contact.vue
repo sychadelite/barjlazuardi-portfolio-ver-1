@@ -6,6 +6,7 @@
                     <h1>Contact&nbsp;<span class="text-[#008080]">Me</span></h1>
                 </article>
             </div>
+            <UtilitiesNeuCardV2/>
         </div>
     </section>
 </template>
