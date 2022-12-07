@@ -6,8 +6,8 @@
             <Nuxt class="max-w-[2000px]"/>
             <NavigationScrollTop/>
             <div class="fixed bottom-0 left-0 m-8">
-                <p>{{ txtWidth }}</p>
-                <p>{{ txtHeight }}</p>
+                <!-- <p>{{ txtWidth }}</p> -->
+                <!-- <p>{{ txtHeight }}</p> -->
             </div>
         </div>
     </div>

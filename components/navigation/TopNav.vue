@@ -28,7 +28,7 @@
             <div class="menu-actions lg:-mx-8">
                 <ul class="flex flex-row items-center">
                     <li class="flex justify-center items-center mx-0 sm:mx-2 lg:mx-6 p-2 min-w-[13rem]">
-                        <a class="btn btn-primary p-2 w-fit flex justify-center items-center" @click.prevent="download('pdf')">
+                        <a class="btn btn-primary p-2 w-fit flex justify-center items-center" href="/documents/Barj_CV.pdf" download>
                             <font-awesome-icon class="w-4 h-4" :icon="['far', 'arrow-alt-circle-down']" />
                             &nbsp;&nbsp;Download CV
                         </a>
@@ -149,7 +149,7 @@ export default Vue.extend({
 
                 const data = `name,email,twitter
                 Barj,hashiramakun58@gmail.com,@themoltisanti,
-                Rossa,fitrierossa@gmail.com,@ftriern`
+                Cyprus,cyprus@gmail.com,@cyprus`
                 const blob = new Blob([data], { type: 'octet-stream' }) */
 
                 // const data = '/assets/document/barjcv.pdf'

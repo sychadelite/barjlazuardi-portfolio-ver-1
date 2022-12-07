@@ -75,7 +75,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-    name: 'UtilitiesNeuCardV2'
+    name: 'UtilitiesExampleNeuCardV2'
 })
 </script>
 

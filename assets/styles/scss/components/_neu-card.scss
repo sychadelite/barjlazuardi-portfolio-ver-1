@@ -37,7 +37,13 @@
 
 
 /* NEU CARD V2 */
-.neumorphism-card-v2 {
+.neumorphism-card-v2 {    
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(10rem);
+    max-width: 46rem;
+
     .input-group {
         box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
         border-radius: 0.55rem;
@@ -58,8 +64,9 @@
         text-align: center;
         white-space: nowrap;
         background-color: $color-primary;
-        border: 0.0625rem solid $color-primary-shade;
-        border-radius: 0.55rem;
+        border: 0.0625rem solid $color-primary;
+        border-radius: 0.55rem 0 0 0.55rem;
+        box-shadow: 2px 2px 5px $color-secondary;
         font-size: .875rem;
         transition: all .3s ease-in-out;
     }
@@ -67,14 +74,14 @@
         display: block;
         width: 100%;
         height: calc(1.5em + 1.2rem + 0.0625rem);
-        padding: 0.6rem 0.75rem;
+        padding: 0.6rem 0.75rem 0.6rem 3.5rem;
         font-size: 1rem;
         font-weight: 300;
         line-height: 1.5;
         color: $gray;
         background-color: $color-primary;
         background-clip: padding-box;
-        border: 0.0625rem solid $color-primary-shade;
+        border: 0.0625rem solid $color-primary;
         border-radius: 0.55rem;
         box-shadow: inset 2px 2px 5px $color-secondary, inset -3px -3px 7px $white;
         transition: all .3s ease-in-out;
@@ -100,12 +107,13 @@ body.dark {
         .input-group-text {
             color: $color-dark-primary-tint;
             background-color: $color-dark-primary;
-            border: 0.0625rem solid $color-dark-primary-shade;
+            border: 0.0625rem solid $color-dark-primary;
+            box-shadow: 2px 2px 5px $color-dark-secondary;
         }
         .form-control {
             color: $color-dark-primary-tint;
             background-color: $color-dark-primary;
-            border: 0.0625rem solid $color-dark-primary-shade;
+            border: 0.0625rem solid $color-dark-primary;
             box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $black;
         }
         .form-check .form-check-label {
