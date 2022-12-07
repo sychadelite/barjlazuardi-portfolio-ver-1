@@ -9,8 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faTwitter, faGithub, faLinkedin, faInstagram, faFacebook, faDiscord } from '@fortawesome/free-brands-svg-icons'
 import { faArrowAltCircleDown, faHandPointRight, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
-import { faUserSecret, faFileArrowDown, faArrowUp, faEnvelope, faUnlock, faMessage, faSignature } from '@fortawesome/free-solid-svg-icons'
-import { faShekelSign, faMusic, faMusicSlash, faArrowLeftFromLine, faSun, faMoonCloud } from '@fortawesome/sharp-solid-svg-icons'
+import { faUserSecret, faFileArrowDown, faArrowUp, faEnvelope, faUnlock, faMessage, faSignature, faShekelSign, faMusic, faSlash, faLeftLong, faSun, faCloudMoon } from '@fortawesome/free-solid-svg-icons'
 
 export default () => {
     // https://github.com/Orlandster/vue-typed-js
@@ -36,10 +35,10 @@ export default () => {
         faSignature,
         faShekelSign,
         faMusic,
-        faMusicSlash,
-        faArrowLeftFromLine,
+        faSlash,
+        faLeftLong,
         faSun,
-        faMoonCloud
+        faCloudMoon
     )
 
     /* add font awesome icon component */
