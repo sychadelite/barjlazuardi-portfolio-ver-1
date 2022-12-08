@@ -12,6 +12,9 @@
     "lint": "npm run lint:js",
     "lintfix": "npm run lint:js -- --fix"
   },
+  "engines": { 
+    "node" : ">=14 <17" 
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
