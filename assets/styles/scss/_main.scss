@@ -55,7 +55,7 @@ a {
 	overflow: hidden;
 }
 
-textarea,
+textarea:focus-visible,
 input:focus-visible {
     outline: 2px solid #008080;
     border-radius: 3px;
