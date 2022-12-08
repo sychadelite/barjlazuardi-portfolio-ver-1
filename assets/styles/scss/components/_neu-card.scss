@@ -96,6 +96,10 @@
         transition: all .2s ease;
         color: $gray;
     }
+    textarea {
+        color: $gray;
+        background-color: $color-primary;
+    }
 }
 
 /* DARK LORD */
@@ -117,6 +121,9 @@ body.dark {
             box-shadow: inset 2px 2px 5px $color-dark-secondary, inset -3px -3px 7px $black;
         }
         .form-check .form-check-label {
+            color: $color-dark-primary-tint;
+        }
+        textarea {
             color: $color-dark-primary-tint;
         }
         label, a, span {
