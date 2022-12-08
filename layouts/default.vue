@@ -110,7 +110,10 @@ export default Vue.extend({
 
             // click listener
             btn.addEventListener('click', function () {
-                $('html, body').animate({ scrollTop: 0 }, 'slow')
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
             })
 
             // resize listener
