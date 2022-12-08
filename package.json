@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider && nuxt",
     "dev:host": "nuxt --hostname 0.0.0.0 --port 3000",
-    "build": "nuxt build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && nuxt build && nuxt export",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
